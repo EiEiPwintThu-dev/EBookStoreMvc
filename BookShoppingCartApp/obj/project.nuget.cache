@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LAjl6/Q3hiFQfsgEj1xLhQ69kUMkWicQieoXh9KKP6fZDV4ZyuBgHyOep+uFt4XIigRBxr32aCzVYL6yMtgQjQ==",
+  "dgSpecHash": "2aIJB9RzwTKgSOxnUZEMSX/2ouk2N2H0vgvix+dtoLiWPcli1lFnoJKiD9FvFIn59wNQeM2RsCoPPJLsjybNnw==",
   "success": true,
-  "projectFilePath": "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
+  "projectFilePath": "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\user\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

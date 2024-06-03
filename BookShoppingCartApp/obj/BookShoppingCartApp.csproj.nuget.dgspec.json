@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp.csproj": {}
+    "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\BookShoppingCartApp.csproj": {}
   },
   "projects": {
-    "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp.csproj": {
+    "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\BookShoppingCartApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
+        "projectUniqueName": "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
         "projectName": "BookShoppingCartApp",
-        "projectPath": "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
+        "projectPath": "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\BookShoppingCartApp.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\youtube\\BookShoppingCartApp\\BookShoppingCartApp\\BookShoppingCartApp\\obj\\",
+        "outputPath": "D:\\youtube\\GitHub\\EBookStoreMvc\\BookShoppingCartApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

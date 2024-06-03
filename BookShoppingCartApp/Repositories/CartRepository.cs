@@ -38,11 +38,13 @@ namespace BookShoppingCartApp.Repositories
                 if(cartItem is not null) cartItem.Quantity += qty;
                 else
                 {
+                    var book = _context.Books.Find(bookId);
                     cartItem = new CartDetail
                     {
                         BookId = bookId,
                         ShoppingCartId = cart.Id,
-                        Quantity = qty
+                        Quantity = qty,
+                        UnitPrice = book.Price
                     };
                     _context.CartDetails.Add(cartItem);
                 }
@@ -108,7 +110,6 @@ namespace BookShoppingCartApp.Repositories
                 Console.WriteLine(ex.Message);
                 return null;
             }
-            
         }
 
         public async Task<ShoppingCart> GetCart(string userId)
@@ -137,6 +138,48 @@ namespace BookShoppingCartApp.Repositories
             var principal = _contextAccessor.HttpContext.User;
             var userId = _userManager.GetUserId(principal);
             return userId;
+        }
+
+        public async Task DoCheckOut()
+        {
+            using var transaction = _context.Database.BeginTransaction();
+            try
+            {
+                var userId = GetUserId();
+                if (userId is null) throw new Exception("User is not logged-in;");
+
+                var cart = await GetCart(userId);
+                if (cart is null) throw new Exception("Invalid Cart;");
+
+                var cartDetail = await _context.CartDetails.Where(a => a.ShoppingCartId == cart.Id).ToListAsync();
+                if (cartDetail.Count == 0) throw new Exception("Cart is empty.");
+
+                var order = new Order
+                {
+                    UserId = userId,
+                    CreatedDate = DateTime.UtcNow,
+                    OrderStatusId = 1, //Pending
+                };
+                _context.Orders.Add(order);
+                _context.SaveChanges();
+
+                foreach(var item in cartDetail)
+                {
+                    var orderDetail = new OrderDetail
+                    {
+                        BookId = item.BookId,
+                        OrderId = order.Id,
+                        Quantity = item.Quantity,
+                        UnitPrice = item.UnitPrice
+                    };
+                    _context.OrderDetails.Add(orderDetail);
+                }
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
