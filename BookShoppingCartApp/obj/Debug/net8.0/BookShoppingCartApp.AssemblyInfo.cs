@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BookShoppingCartApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2de501c81cd3d0ca7c94dfc1905eab81d87cc4e2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1713f78bb988b2f2d6ef91289e9b6f5cf98bc67")]
 [assembly: System.Reflection.AssemblyProductAttribute("BookShoppingCartApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BookShoppingCartApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
